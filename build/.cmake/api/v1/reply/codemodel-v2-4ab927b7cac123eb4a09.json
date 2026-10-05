@@ -1,0 +1,255 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Git::Git::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Git__Git-Debug-a41860287e4f77e73142.json",
+					"name" : "Git::Git",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Threads::Threads::@369fad943889a5ec39c8",
+					"jsonFile" : "target-Threads__Threads-Debug-f5b1fdf2a5dec60f88e6.json",
+					"name" : "Threads::Threads",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "glm-header-only::@ce54d98d7b326a3e12a8",
+					"jsonFile" : "target-glm-header-only-Debug-d1919677ec2515031905.json",
+					"name" : "glm-header-only",
+					"projectIndex" : 2
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-b5805d5c08fd3d92def4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.11"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						1
+					],
+					"build" : "_deps/glfw-build",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.glfw-build-Debug-31b0551d8b12a7108e7e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glfw-src",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "_deps/glfw-build/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-_deps.glfw-build.src-Debug-1a54cd75b8893c97dacb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glfw-src/src",
+					"targetIndexes" : 
+					[
+						1,
+						4
+					]
+				},
+				{
+					"build" : "_deps/glfw-build/docs",
+					"jsonFile" : "directory-_deps.glfw-build.docs-Debug-c2ab9183e76c3dad346a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glfw-src/docs"
+				},
+				{
+					"build" : "_deps/glm-build",
+					"childIndexes" : 
+					[
+						5
+					],
+					"jsonFile" : "directory-_deps.glm-build-Debug-2aa38ffc003f742d155d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glm-src"
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						2
+					],
+					"build" : "_deps/glm-build/glm",
+					"jsonFile" : "directory-_deps.glm-build.glm-Debug-4f299c0246d1e2004c29.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.6"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 2,
+					"source" : "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glm-src/glm",
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PG2026-2",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						3,
+						4
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						2
+					],
+					"directoryIndexes" : 
+					[
+						4,
+						5
+					],
+					"name" : "glm",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Geometry-Dash::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Geometry-Dash-Debug-06872eb31c60866dd7d5.json",
+					"name" : "Geometry-Dash",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "glfw::@fa9f4482d3a2b070f206",
+					"jsonFile" : "target-glfw-Debug-07f98bab4994525dcea1.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "glm::@ce54d98d7b326a3e12a8",
+					"jsonFile" : "target-glm-Debug-509f98cdcb01fe3f96bd.json",
+					"name" : "glm",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "uninstall::@369fad943889a5ec39c8",
+					"jsonFile" : "target-uninstall-Debug-aa6d43fe5ee7f1a1c454.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "update_mappings::@fa9f4482d3a2b070f206",
+					"jsonFile" : "target-update_mappings-Debug-b72a5e2a11a9ce9f6f97.json",
+					"name" : "update_mappings",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build",
+		"source" : "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

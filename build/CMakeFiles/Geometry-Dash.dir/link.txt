@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Geometry-Dash.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\Geometry-Dash.dir/objects.a @CMakeFiles\Geometry-Dash.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Geometry-Dash.dir/objects.a -Wl,--no-whole-archive -o Geometry-Dash.exe -Wl,--out-implib,libGeometry-Dash.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Geometry-Dash.dir\linkLibs.rsp

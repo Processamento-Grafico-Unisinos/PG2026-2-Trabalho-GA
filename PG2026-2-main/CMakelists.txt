@@ -41,13 +41,7 @@ include_directories(${stb_image_SOURCE_DIR})
 # Lista de exercícios/projetos (um diretório para cada)
 # OBS.: Não pode ter acentos ou caracteres especiais
 set(EXERCISES
-    Exemplos/HelloTriangle
-    Lista2/exercicio1
-    Lista2/exercicio2
-    Lista2/exercicio3
-    Lista2/exercicio4
-    Lista2/exercicio5
-    Lista2/exercicio6
+    Geometry-Dash
 )
 
 add_compile_options(-Wno-pragmas)

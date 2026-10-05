@@ -1,3 +1,0 @@
-C:\Users\PaesGuilherme\Documents\cmake-4.4.1-windows-x86_64\cmake-4.4.1-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\exercicio5.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\exercicio5.dir/objects.a @CMakeFiles\exercicio5.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\exercicio5.dir/objects.a -Wl,--no-whole-archive -o exercicio5.exe -Wl,--out-implib,libexercicio5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\exercicio5.dir\linkLibs.rsp
