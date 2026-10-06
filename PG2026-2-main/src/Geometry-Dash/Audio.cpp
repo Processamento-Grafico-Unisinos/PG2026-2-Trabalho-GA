@@ -1,6 +1,4 @@
-// Audio.cpp - AS DUAS PESSOAS
 #include "Audio.h"
-
 #include <iostream>
 
 // A implementação da miniaudio deve ser compilada em UM único .cpp do projeto.

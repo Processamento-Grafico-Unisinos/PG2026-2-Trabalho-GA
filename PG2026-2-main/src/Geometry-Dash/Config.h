@@ -1,4 +1,3 @@
-// Config.h - CONTRATO (as duas pessoas usam)
 // Constantes compartilhadas entre o motor de renderização e a lógica do jogo.
 #pragma once
 

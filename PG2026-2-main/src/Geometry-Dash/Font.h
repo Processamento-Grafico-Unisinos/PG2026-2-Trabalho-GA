@@ -1,4 +1,3 @@
-// Font.h - PESSOA 1 (motor de renderização)
 // Fonte para os textos da HUD. O arquivo .ttf é convertido UMA vez, na carga,
 // em uma textura com todos os caracteres lado a lado (um "atlas"). Desenhar um
 // texto vira desenhar um quad por caractere, recortando o atlas do mesmo jeito

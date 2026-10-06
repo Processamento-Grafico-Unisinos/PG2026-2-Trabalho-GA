@@ -1,4 +1,3 @@
-// Audio.h - AS DUAS PESSOAS
 // Música de fundo e efeitos sonoros, tocados com a biblioteca miniaudio.
 // Se o áudio falhar (sem placa de som, arquivo ausente...), as funções avisam
 // no console e o jogo continua rodando sem som.
@@ -6,7 +5,7 @@
 
 #include <string>
 
-// Chamar UMA vez, no início do programa
+// Chamar uma única vez, no início do programa
 bool initAudio();
 
 // Carrega o arquivo de música (mp3, wav, flac). Ainda não toca.
@@ -23,8 +22,8 @@ enum class Sfx
 {
     Select,  // trocar de opção no menu
     Confirm, // confirmar a opção
-    Jump,    // pular
-    Death    // morrer
+    Jump,    
+    Death    
 };
 
 // Carrega o arquivo de um efeito. Ainda não toca.

@@ -1,4 +1,3 @@
-// Font.cpp - PESSOA 1 (motor de renderização)
 #include "Font.h"
 
 #include <fstream>
