@@ -31,9 +31,25 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(stb_image)
 
+# miniaudio (música): é um único arquivo .h, então basta baixá-lo uma vez
+set(MINIAUDIO_DIR ${CMAKE_BINARY_DIR}/_deps/miniaudio)
+if(NOT EXISTS ${MINIAUDIO_DIR}/miniaudio.h)
+  file(DOWNLOAD
+    https://raw.githubusercontent.com/mackron/miniaudio/0.11.25/miniaudio.h
+    ${MINIAUDIO_DIR}/miniaudio.h
+    STATUS MINIAUDIO_DOWNLOAD_STATUS
+  )
+  list(GET MINIAUDIO_DOWNLOAD_STATUS 0 MINIAUDIO_DOWNLOAD_CODE)
+  if(NOT MINIAUDIO_DOWNLOAD_CODE EQUAL 0)
+    file(REMOVE ${MINIAUDIO_DIR}/miniaudio.h)
+    message(FATAL_ERROR "Não foi possível baixar a miniaudio: ${MINIAUDIO_DOWNLOAD_STATUS}")
+  endif()
+endif()
+
 # Adiciona as pastas de cabeçalhos
+include_directories(${MINIAUDIO_DIR})
 include_directories(${CMAKE_SOURCE_DIR}/include)
-include_directories(${CMAKE_SOURCE_DIR}/common)
+include_directories(${CMAKE_SOURCE_DIR}/Common)
 include_directories(${CMAKE_SOURCE_DIR}/include/glad)
 include_directories(${glm_SOURCE_DIR})
 include_directories(${stb_image_SOURCE_DIR})
@@ -49,22 +65,25 @@ add_compile_options(-Wno-pragmas)
 # Define as bibliotecas para cada sistema operacional
 if(WIN32)
     set(OPENGL_LIBS opengl32)
+    set(AUDIO_LIBS "") # a miniaudio não precisa de nenhuma biblioteca extra no Windows
 elseif(APPLE)
     find_library(OpenGL_LIBRARY OpenGL)
     set(OPENGL_LIBS ${OpenGL_LIBRARY})
+    set(AUDIO_LIBS "-framework CoreFoundation" "-framework CoreAudio" "-framework AudioToolbox")
 else()
     find_package(OpenGL REQUIRED)
     set(OPENGL_LIBS ${OPENGL_gl_LIBRARY})
+    set(AUDIO_LIBS pthread m dl)
 endif()
 
 # Caminho esperado para a GLAD
-set(GLAD_C_FILE "${CMAKE_SOURCE_DIR}/common/glad.c")
+set(GLAD_C_FILE "${CMAKE_SOURCE_DIR}/Common/glad.c")
 
 # Verifica se os arquivos da GLAD estão no lugar
 if (NOT EXISTS ${GLAD_C_FILE})
     message(FATAL_ERROR "Arquivo glad.c não encontrado! 
     Baixe a GLAD manualmente em https://glad.dav1d.de/ 
-    e coloque glad.h em include/glad/ e glad.c em common/")
+    e coloque glad.h em include/glad/ e glad.c em Common/")
 endif()
 
 # Cria os executáveis (um por diretório listado em EXERCISES)
@@ -81,6 +100,9 @@ foreach(EXERCISE ${EXERCISES})
     # Configura includes e bibliotecas
     target_include_directories(${EXE_NAME} PRIVATE ${CMAKE_SOURCE_DIR}/include/glad ${glm_SOURCE_DIR} ${stb_image_SOURCE_DIR})
 
+    # Caminho absoluto da pasta de imagens, para o jogo encontrá-las
+    # independente da pasta de onde o executável é chamado
+    target_compile_definitions(${EXE_NAME} PRIVATE ASSETS_DIR="${CMAKE_SOURCE_DIR}/assets/")
 
-    target_link_libraries(${EXE_NAME} glfw ${OPENGL_LIBS} glm::glm )
+    target_link_libraries(${EXE_NAME} glfw ${OPENGL_LIBS} ${AUDIO_LIBS} glm::glm )
 endforeach()

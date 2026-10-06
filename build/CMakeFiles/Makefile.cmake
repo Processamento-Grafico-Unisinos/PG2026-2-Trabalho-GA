@@ -57,7 +57,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/Platform/WindowsPaths.cmake"
   "C:/Program Files/CMake/share/cmake-4.4/Modules/WriteBasicConfigVersionFile.cmake"
-  "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/CMakeLists.txt"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/CMakeLists.txt"
   "CMakeFiles/4.4.3/CMakeCCompiler.cmake"
   "CMakeFiles/4.4.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.4.3/CMakeRCCompiler.cmake"

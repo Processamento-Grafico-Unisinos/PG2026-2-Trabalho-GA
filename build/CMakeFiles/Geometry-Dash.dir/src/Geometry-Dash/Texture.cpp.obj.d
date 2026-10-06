@@ -1,6 +1,6 @@
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: \
- C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Texture.cpp \
- C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Texture.h \
+ C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Texture.cpp \
+ C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Texture.h \
  C:/msys64/ucrt64/include/c++/16.1.0/string \
  C:/msys64/ucrt64/include/c++/16.1.0/bits/requires_hosted.h \
  C:/msys64/ucrt64/include/c++/16.1.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -101,8 +101,8 @@ CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: \
  C:/msys64/ucrt64/include/c++/16.1.0/bits/uses_allocator_args.h \
  C:/msys64/ucrt64/include/c++/16.1.0/tuple \
  C:/msys64/ucrt64/include/c++/16.1.0/bits/invoke.h \
- C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/include/glad/glad.h \
- C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/include/glad/KHR/khrplatform.h \
+ C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/include/glad/glad.h \
+ C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/include/glad/KHR/khrplatform.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/stdint.h \
  C:/msys64/ucrt64/include/stdint.h \
  C:/msys64/ucrt64/include/c++/16.1.0/iostream \
@@ -153,7 +153,7 @@ CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: \
  C:/msys64/ucrt64/include/c++/16.1.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/16.1.0/istream \
  C:/msys64/ucrt64/include/c++/16.1.0/bits/istream.tcc \
- C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/stb_image-src/stb_image.h \
+ C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/_deps/stb_image-src/stb_image.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/stdarg.h \
  C:/msys64/ucrt64/include/stdarg.h \
  C:/msys64/ucrt64/include/_mingw_stdarg.h \

@@ -56,10 +56,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main
+CMAKE_SOURCE_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build
+CMAKE_BINARY_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -131,9 +131,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -225,29 +225,77 @@ glm/fast:
 	$(MAKE) $(MAKESILENT) -f _deps\glm-build\glm\CMakeFiles\glm.dir\build.make _deps/glm-build/glm/CMakeFiles/glm.dir/build
 .PHONY : glm/fast
 
-common/glad.obj: common/glad.c.obj
-.PHONY : common/glad.obj
+Common/glad.obj: Common/glad.c.obj
+.PHONY : Common/glad.obj
 
 # target to build an object file
-common/glad.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/common/glad.c.obj
-.PHONY : common/glad.c.obj
+Common/glad.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj
+.PHONY : Common/glad.c.obj
 
-common/glad.i: common/glad.c.i
-.PHONY : common/glad.i
+Common/glad.i: Common/glad.c.i
+.PHONY : Common/glad.i
 
 # target to preprocess a source file
-common/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/common/glad.c.i
-.PHONY : common/glad.c.i
+Common/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/Common/glad.c.i
+.PHONY : Common/glad.c.i
 
-common/glad.s: common/glad.c.s
-.PHONY : common/glad.s
+Common/glad.s: Common/glad.c.s
+.PHONY : Common/glad.s
 
 # target to generate assembly for a file
-common/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/common/glad.c.s
-.PHONY : common/glad.c.s
+Common/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/Common/glad.c.s
+.PHONY : Common/glad.c.s
+
+src/Geometry-Dash/Audio.obj: src/Geometry-Dash/Audio.cpp.obj
+.PHONY : src/Geometry-Dash/Audio.obj
+
+# target to build an object file
+src/Geometry-Dash/Audio.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj
+.PHONY : src/Geometry-Dash/Audio.cpp.obj
+
+src/Geometry-Dash/Audio.i: src/Geometry-Dash/Audio.cpp.i
+.PHONY : src/Geometry-Dash/Audio.i
+
+# target to preprocess a source file
+src/Geometry-Dash/Audio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.i
+.PHONY : src/Geometry-Dash/Audio.cpp.i
+
+src/Geometry-Dash/Audio.s: src/Geometry-Dash/Audio.cpp.s
+.PHONY : src/Geometry-Dash/Audio.s
+
+# target to generate assembly for a file
+src/Geometry-Dash/Audio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.s
+.PHONY : src/Geometry-Dash/Audio.cpp.s
+
+src/Geometry-Dash/Font.obj: src/Geometry-Dash/Font.cpp.obj
+.PHONY : src/Geometry-Dash/Font.obj
+
+# target to build an object file
+src/Geometry-Dash/Font.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj
+.PHONY : src/Geometry-Dash/Font.cpp.obj
+
+src/Geometry-Dash/Font.i: src/Geometry-Dash/Font.cpp.i
+.PHONY : src/Geometry-Dash/Font.i
+
+# target to preprocess a source file
+src/Geometry-Dash/Font.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.i
+.PHONY : src/Geometry-Dash/Font.cpp.i
+
+src/Geometry-Dash/Font.s: src/Geometry-Dash/Font.cpp.s
+.PHONY : src/Geometry-Dash/Font.s
+
+# target to generate assembly for a file
+src/Geometry-Dash/Font.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.s
+.PHONY : src/Geometry-Dash/Font.cpp.s
 
 src/Geometry-Dash/Game.obj: src/Geometry-Dash/Game.cpp.obj
 .PHONY : src/Geometry-Dash/Game.obj
@@ -272,6 +320,30 @@ src/Geometry-Dash/Game.s: src/Geometry-Dash/Game.cpp.s
 src/Geometry-Dash/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.s
 .PHONY : src/Geometry-Dash/Game.cpp.s
+
+src/Geometry-Dash/Hud.obj: src/Geometry-Dash/Hud.cpp.obj
+.PHONY : src/Geometry-Dash/Hud.obj
+
+# target to build an object file
+src/Geometry-Dash/Hud.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj
+.PHONY : src/Geometry-Dash/Hud.cpp.obj
+
+src/Geometry-Dash/Hud.i: src/Geometry-Dash/Hud.cpp.i
+.PHONY : src/Geometry-Dash/Hud.i
+
+# target to preprocess a source file
+src/Geometry-Dash/Hud.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.i
+.PHONY : src/Geometry-Dash/Hud.cpp.i
+
+src/Geometry-Dash/Hud.s: src/Geometry-Dash/Hud.cpp.s
+.PHONY : src/Geometry-Dash/Hud.s
+
+# target to generate assembly for a file
+src/Geometry-Dash/Hud.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Geometry-Dash.dir\build.make CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.s
+.PHONY : src/Geometry-Dash/Hud.cpp.s
 
 src/Geometry-Dash/Renderer.obj: src/Geometry-Dash/Renderer.cpp.obj
 .PHONY : src/Geometry-Dash/Renderer.obj
@@ -386,12 +458,21 @@ help:
 	@echo ... Geometry-Dash
 	@echo ... glfw
 	@echo ... glm
-	@echo ... common/glad.obj
-	@echo ... common/glad.i
-	@echo ... common/glad.s
+	@echo ... Common/glad.obj
+	@echo ... Common/glad.i
+	@echo ... Common/glad.s
+	@echo ... src/Geometry-Dash/Audio.obj
+	@echo ... src/Geometry-Dash/Audio.i
+	@echo ... src/Geometry-Dash/Audio.s
+	@echo ... src/Geometry-Dash/Font.obj
+	@echo ... src/Geometry-Dash/Font.i
+	@echo ... src/Geometry-Dash/Font.s
 	@echo ... src/Geometry-Dash/Game.obj
 	@echo ... src/Geometry-Dash/Game.i
 	@echo ... src/Geometry-Dash/Game.s
+	@echo ... src/Geometry-Dash/Hud.obj
+	@echo ... src/Geometry-Dash/Hud.i
+	@echo ... src/Geometry-Dash/Hud.s
 	@echo ... src/Geometry-Dash/Renderer.obj
 	@echo ... src/Geometry-Dash/Renderer.i
 	@echo ... src/Geometry-Dash/Renderer.s

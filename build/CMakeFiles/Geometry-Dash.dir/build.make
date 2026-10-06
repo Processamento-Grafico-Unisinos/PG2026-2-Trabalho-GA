@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main
+CMAKE_SOURCE_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build
+CMAKE_BINARY_DIR = C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Geometry-Dash.dir/depend.make
@@ -71,121 +71,172 @@ include CMakeFiles/Geometry-Dash.dir/flags.make
 CMakeFiles/Geometry-Dash.dir/codegen:
 .PHONY : CMakeFiles/Geometry-Dash.dir/codegen
 
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Audio.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Audio.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Audio.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Audio.cpp
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Audio.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Audio.cpp.i
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Audio.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Audio.cpp.s
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Font.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Font.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Font.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Font.cpp
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Font.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Font.cpp.i
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Font.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Font.cpp.s
+
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
-CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Game.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Game.cpp
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Game.cpp
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Game.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Game.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.i
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Game.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Game.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Game.cpp.s
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Hud.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Hud.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Hud.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Hud.cpp
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.i"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Hud.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Hud.cpp.i
+
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.s"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Hud.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Hud.cpp.s
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
-CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Renderer.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Renderer.cpp
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Renderer.cpp
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Renderer.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Renderer.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.i
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Renderer.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Renderer.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Renderer.cpp.s
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
-CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Shader.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Shader.cpp
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Shader.cpp
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Shader.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Shader.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.i
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Shader.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Shader.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Shader.cpp.s
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
-CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Texture.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Texture.cpp
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Texture.cpp
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Texture.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Texture.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.i
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\Texture.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\Texture.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\Texture.cpp.s
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj: CMakeFiles/Geometry-Dash.dir/flags.make
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj: CMakeFiles/Geometry-Dash.dir/includes_CXX.rsp
-CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/main.cpp
+CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/main.cpp
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj"
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj -MF CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.obj.d -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\main.cpp
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.i"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\main.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.i
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\main.cpp > CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.i
 
 CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.s"
-	C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\src\Geometry-Dash\main.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.s
+	C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\src\Geometry-Dash\main.cpp -o CMakeFiles\Geometry-Dash.dir\src\Geometry-Dash\main.cpp.s
 
-CMakeFiles/Geometry-Dash.dir/common/glad.c.obj: CMakeFiles/Geometry-Dash.dir/flags.make
-CMakeFiles/Geometry-Dash.dir/common/glad.c.obj: CMakeFiles/Geometry-Dash.dir/includes_C.rsp
-CMakeFiles/Geometry-Dash.dir/common/glad.c.obj: C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/common/glad.c
-CMakeFiles/Geometry-Dash.dir/common/glad.c.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/Geometry-Dash.dir/common/glad.c.obj"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/common/glad.c.obj -MF CMakeFiles\Geometry-Dash.dir\common\glad.c.obj.d -o CMakeFiles\Geometry-Dash.dir\common\glad.c.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\common\glad.c
+CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj: CMakeFiles/Geometry-Dash.dir/flags.make
+CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj: CMakeFiles/Geometry-Dash.dir/includes_C.rsp
+CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/Common/glad.c
+CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj: CMakeFiles/Geometry-Dash.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj"
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj -MF CMakeFiles\Geometry-Dash.dir\Common\glad.c.obj.d -o CMakeFiles\Geometry-Dash.dir\Common\glad.c.obj -c C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\Common\glad.c
 
-CMakeFiles/Geometry-Dash.dir/common/glad.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Geometry-Dash.dir/common/glad.c.i"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\common\glad.c > CMakeFiles\Geometry-Dash.dir\common\glad.c.i
+CMakeFiles/Geometry-Dash.dir/Common/glad.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/Geometry-Dash.dir/Common/glad.c.i"
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\Common\glad.c > CMakeFiles\Geometry-Dash.dir\Common\glad.c.i
 
-CMakeFiles/Geometry-Dash.dir/common/glad.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Geometry-Dash.dir/common/glad.c.s"
-	C:\msys64\ucrt64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\common\glad.c -o CMakeFiles\Geometry-Dash.dir\common\glad.c.s
+CMakeFiles/Geometry-Dash.dir/Common/glad.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/Geometry-Dash.dir/Common/glad.c.s"
+	C:\msys64\ucrt64\bin\cc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\Common\glad.c -o CMakeFiles\Geometry-Dash.dir\Common\glad.c.s
 
 # Object files for target Geometry-Dash
 Geometry__Dash_OBJECTS = \
+"CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj" \
+"CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj" \
 "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj" \
+"CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj" \
 "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj" \
 "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj" \
 "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj" \
 "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj" \
-"CMakeFiles/Geometry-Dash.dir/common/glad.c.obj"
+"CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj"
 
 # External object files for target Geometry-Dash
 Geometry__Dash_EXTERNAL_OBJECTS =
 
+Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj
+Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj
+Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj
-Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/common/glad.c.obj
+Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/build.make
 Geometry-Dash.exe: _deps/glfw-build/src/libglfw3.a
 Geometry-Dash.exe: _deps/glm-build/glm/libglm.a
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/linkLibs.rsp
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/objects1.rsp
 Geometry-Dash.exe: CMakeFiles/Geometry-Dash.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Geometry-Dash.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Geometry-Dash.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Geometry-Dash.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -197,6 +248,6 @@ CMakeFiles/Geometry-Dash.dir/clean:
 .PHONY : CMakeFiles/Geometry-Dash.dir/clean
 
 CMakeFiles/Geometry-Dash.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\build\CMakeFiles\Geometry-Dash.dir\DependInfo.cmake "--color=$(COLOR)" Geometry-Dash
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\build\CMakeFiles\Geometry-Dash.dir\DependInfo.cmake "--color=$(COLOR)" Geometry-Dash
 .PHONY : CMakeFiles/Geometry-Dash.dir/depend
 

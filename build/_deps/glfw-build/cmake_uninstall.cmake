@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glfw-build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glfw-build/install_manifest.txt\"")
+if (NOT EXISTS "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/_deps/glfw-build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/_deps/glfw-build/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glfw-build/install_manifest.txt" files)
+file(READ "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/_deps/glfw-build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

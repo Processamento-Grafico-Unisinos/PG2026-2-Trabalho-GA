@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main
+# Install script for directory: C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,15 +39,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glfw-build/cmake_install.cmake")
-  include("C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/_deps/glm-build/cmake_install.cmake")
+  include("C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/_deps/glfw-build/cmake_install.cmake")
+  include("C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/_deps/glm-build/cmake_install.cmake")
 
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/install_local_manifest.txt"
+  file(WRITE "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -63,6 +63,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

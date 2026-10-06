@@ -4,18 +4,20 @@
 //
 // Cria a janela e roda o game loop, que é o ponto de encontro das duas partes:
 //   processInput() e update()  -> Game     (Pessoa 2)
-//   render()                   -> Renderer (Pessoa 1)
+//   render()                   -> Renderer (Pessoa 1) + Hud (textos e menus)
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 
-#include <cstdio> // ALTERADO: sprintf, para montar o título com pontos/game over
 #include <iostream>
+#include <string>
 #include <vector>
 
+#include "Audio.h"
 #include "Config.h"
 #include "Game.h"
+#include "Hud.h"
 #include "Renderer.h"
 #include "Texture.h"
 
@@ -27,55 +29,42 @@ static void framebufferSizeCallback(GLFWwindow *window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
-// --- Texturas provisórias, geradas por código -------------------------------
-// Servem só para testar o parallax enquanto não há imagens.
-// Quando tiverem os arquivos, troquem por:
-//     loadTexture("caminho/da/imagem.png", true, true);
-// e apaguem estas duas funções.
+// Pasta das imagens. O CMakeLists.txt define ASSETS_DIR com o caminho absoluto
+// de PG2026-2-main/assets/, então o jogo acha as imagens independente da pasta
+// de onde o executável é chamado. Sem o CMake, vale o caminho relativo abaixo.
+#ifndef ASSETS_DIR
+#define ASSETS_DIR "assets/"
+#endif
 
-// Céu: degradê vertical, opaco
-static Texture makeSkyTexture()
+static std::string assetPath(const std::string &file)
 {
-    const int W = 4, H = 64;
-    std::vector<unsigned char> pixels(W * H * 4);
-    for (int y = 0; y < H; y++)
-    {
-        float t = (float)y / (float)(H - 1); // 0 embaixo, 1 em cima
-        for (int x = 0; x < W; x++)
-        {
-            unsigned char *p = &pixels[(y * W + x) * 4];
-            p[0] = (unsigned char)(90 - 60 * t);
-            p[1] = (unsigned char)(60 - 40 * t);
-            p[2] = (unsigned char)(150 - 70 * t);
-            p[3] = 255;
-        }
-    }
-    return createTextureFromPixels(pixels.data(), W, H, true, true);
+    return std::string(ASSETS_DIR) + file;
 }
 
-// Silhueta de "prédios": blocos de alturas variadas, transparente acima deles
-static Texture makeSkylineTexture(unsigned int seed, int maxHeight,
-                                  unsigned char r, unsigned char g, unsigned char b)
+// Toca o som de cada evento do frame e esvazia a lista, para o mesmo evento
+// não tocar de novo no frame seguinte.
+static void playEventSounds(Game &game)
 {
-    const int W = 256, H = 128, BLOCK = 16;
-    std::vector<unsigned char> pixels(W * H * 4, 0);
-    for (int x = 0; x < W; x++)
+    for (GameEvent event : game.events)
     {
-        // altura pseudoaleatória, igual para todas as colunas do mesmo bloco
-        unsigned int n = (x / BLOCK) * 2654435761u + seed * 40503u;
-        int height = maxHeight / 3 + (int)((n >> 8) % (unsigned int)(maxHeight * 2 / 3));
-        for (int y = 0; y < height && y < H; y++)
+        switch (event)
         {
-            unsigned char *p = &pixels[(y * W + x) * 4];
-            p[0] = r;
-            p[1] = g;
-            p[2] = b;
-            p[3] = 255;
+        case GameEvent::OptionChanged:
+            playSfx(Sfx::Select);
+            break;
+        case GameEvent::OptionConfirmed:
+            playSfx(Sfx::Confirm);
+            break;
+        case GameEvent::Jumped:
+            playSfx(Sfx::Jump);
+            break;
+        case GameEvent::Died:
+            playSfx(Sfx::Death);
+            break;
         }
     }
-    return createTextureFromPixels(pixels.data(), W, H, true, false);
+    game.events.clear();
 }
-// -----------------------------------------------------------------------------
 
 int main()
 {
@@ -121,33 +110,55 @@ int main()
     if (!renderer.init())
         return -1;
 
-    // --- Texturas ---
-    Texture white = createWhiteTexture(); // retângulos de cor sólida
+    // --- Texturas dos sprites (sem repetição, filtro linear) ---
+    // player.png e spike.png são spritesheets; o número de quadros e de
+    // animações de cada uma está em Game.h.
+    Texture playerTexture = loadTexture(assetPath("player.png"), false, true);
+    Texture groundTexture = loadTexture(assetPath("ground.png"), false, true);
+    Texture obstacleTexture = loadTexture(assetPath("spike.png"), false, true);
 
     // --- Camadas de fundo, da mais distante para a mais próxima ---
+    // repeat = true: a imagem se repete na horizontal enquanto a câmera anda
     std::vector<Layer> layers;
 
     Layer sky; // céu: parado na tela
-    sky.texture = makeSkyTexture();
+    sky.texture = loadTexture(assetPath("bg_sky.png"), true, true);
     sky.scrollRate = 0.0f;
     layers.push_back(sky);
 
     Layer farBuildings; // prédios distantes: passam devagar
-    farBuildings.texture = makeSkylineTexture(1, 80, 60, 50, 110);
+    farBuildings.texture = loadTexture(assetPath("bg_far.png"), true, true);
     farBuildings.scrollRate = 0.25f;
     layers.push_back(farBuildings);
 
     Layer nearBuildings; // prédios próximos: passam mais rápido
-    nearBuildings.texture = makeSkylineTexture(7, 55, 40, 35, 80);
+    nearBuildings.texture = loadTexture(assetPath("bg_near.png"), true, true);
     nearBuildings.scrollRate = 0.5f;
     layers.push_back(nearBuildings);
 
+    // --- Fonte da HUD, em três tamanhos ---
+    // A Press Start 2P é desenhada numa grade de 8x8, então fica nítida em
+    // tamanhos múltiplos de 8.
+    const std::string fontFile = assetPath("fonts/PressStart2P-Regular.ttf");
+    HudFonts fonts;
+    fonts.small = loadFont(fontFile, 16.0f);
+    fonts.medium = loadFont(fontFile, 24.0f);
+    fonts.large = loadFont(fontFile, 48.0f);
+
+    // --- Música ---
+    if (initAudio())
+    {
+        loadMusic(assetPath("Arcade_Rush.mp3"));
+        loadSfx(Sfx::Select, assetPath("sfx/select.wav"));
+        loadSfx(Sfx::Confirm, assetPath("sfx/confirm.wav"));
+        loadSfx(Sfx::Jump, assetPath("sfx/jump.wav"));
+        loadSfx(Sfx::Death, assetPath("sfx/death.wav"));
+    }
+
     // --- Lógica do jogo (Pessoa 2) ---
     Game game;
-    game.init(white.id, white.id, white.id);
-
-    game.player.color = glm::vec4(0.2f, 0.8f, 1.0f, 1.0f); // ciano
-    game.ground.color  = glm::vec4(0.3f, 0.3f, 0.3f, 1.0f); // cinza escuro
+    game.init(playerTexture.id, groundTexture.id, obstacleTexture.id);
+    GameState lastState = game.state; // para perceber a troca de tela e ligar/desligar a música
 
     // --- GAME LOOP ---
     double lastTime = glfwGetTime();
@@ -170,14 +181,19 @@ int main()
         // 2. UPDATE
         game.update(dt);
 
-        // ALTERADO: HUD simples (pontos / game over) exibido no título da janela,
-        // já que o trabalho ainda não tem texto na tela (FreeType é extra opcional)
-        char titleBuf[256];
-        if (game.gameOver)
-            sprintf(titleBuf, "Grau A -- Gabriel Gomes e Guilherme Paes | GAME OVER (pontos: %d) - aperte ESPACO para reiniciar", game.score);
-        else
-            sprintf(titleBuf, "Grau A -- Gabriel Gomes e Guilherme Paes | Pontos: %d", game.score);
-        glfwSetWindowTitle(window, titleBuf);
+        // Efeitos sonoros: um para cada evento que o Game registrou neste frame
+        playEventSounds(game);
+
+        // Música: começa do início quando a partida começa e para quando ela
+        // termina (game over ou volta ao menu). No menu não toca.
+        if (game.state != lastState)
+        {
+            if (game.state == GameState::Playing)
+                playMusic();
+            else
+                stopMusic();
+            lastState = game.state;
+        }
 
         // 3. RENDER - a ordem das chamadas define o que fica na frente
         renderer.beginFrame(game.cameraX);
@@ -185,16 +201,22 @@ int main()
         for (const Layer &layer : layers)
             renderer.drawLayer(layer);
 
-        renderer.drawSprite(game.ground);
+        for (const Sprite &tile : game.groundTiles)
+            renderer.drawSprite(tile);
 
         for (const Sprite &obstacle : game.obstacles)
             renderer.drawSprite(obstacle);
 
         renderer.drawSprite(game.player);
 
+        // HUD por último (fica na frente de tudo), com a projeção sem câmera
+        renderer.beginHUD();
+        drawHud(renderer, fonts, game);
+
         glfwSwapBuffers(window); // troca o back buffer pelo front buffer
     }
 
+    shutdownAudio();
     renderer.shutdown();
     glfwTerminate();
     return 0;

@@ -1,3 +1,3 @@
 {
-    "cmake.sourceDirectory": "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main"
+    "cmake.sourceDirectory": "${workspaceFolder}/PG2026-2-main"
 }

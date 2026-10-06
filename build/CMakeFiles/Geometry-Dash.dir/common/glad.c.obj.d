@@ -1,5 +1,5 @@
-CMakeFiles/Geometry-Dash.dir/common/glad.c.obj: \
- C:\Users\guilh\Documents\GitHub\PG2026-2_Guilherme-Paes\PG2026-2-main\common\glad.c \
+CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj: \
+ C:\Users\guilh\Documents\GitHub\PG2026-2-Trabalho-GA\PG2026-2-main\Common\glad.c \
  C:/msys64/ucrt64/include/stdio.h \
  C:/msys64/ucrt64/include/corecrt_stdio_config.h \
  C:/msys64/ucrt64/include/corecrt.h C:/msys64/ucrt64/include/_mingw.h \
@@ -20,8 +20,8 @@ CMakeFiles/Geometry-Dash.dir/common/glad.c.obj: \
  C:/msys64/ucrt64/include/errno.h C:/msys64/ucrt64/include/string.h \
  C:/msys64/ucrt64/include/corecrt_memory.h \
  C:/msys64/ucrt64/include/sec_api/string_s.h \
- C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/include/glad/glad.h \
- C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/include/glad/KHR/khrplatform.h \
+ C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/include/glad/glad.h \
+ C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/include/glad/KHR/khrplatform.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/stdint.h \
  C:/msys64/ucrt64/include/stdint.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/16.1.0/include/stddef.h \

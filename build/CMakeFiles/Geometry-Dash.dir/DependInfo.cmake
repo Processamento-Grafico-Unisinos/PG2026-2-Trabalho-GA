@@ -8,12 +8,15 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/common/glad.c" "CMakeFiles/Geometry-Dash.dir/common/glad.c.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/common/glad.c.obj.d"
-  "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Game.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj.d"
-  "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Renderer.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj.d"
-  "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Shader.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj.d"
-  "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/Texture.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj.d"
-  "C:/Users/guilh/Documents/GitHub/PG2026-2_Guilherme-Paes/PG2026-2-main/src/Geometry-Dash/main.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/Common/glad.c" "CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/Common/glad.c.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Audio.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Audio.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Font.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Font.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Game.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Game.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Hud.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Hud.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Renderer.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Renderer.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Shader.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Shader.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/Texture.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/Texture.cpp.obj.d"
+  "C:/Users/guilh/Documents/GitHub/PG2026-2-Trabalho-GA/PG2026-2-main/src/Geometry-Dash/main.cpp" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj" "gcc" "CMakeFiles/Geometry-Dash.dir/src/Geometry-Dash/main.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

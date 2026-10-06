@@ -58,6 +58,7 @@ bool Renderer::init()
         return false;
 
     setupQuad();
+    whiteTexture = createWhiteTexture();
 
     // Composição das imagens (slide "Composição de imagens"):
     // com GL_ALWAYS, quem é desenhado por último fica na frente.
@@ -224,9 +225,75 @@ void Renderer::drawLayer(const Layer &layer)
 }
 
 // ---------------------------------------------------------------------------
+// HUD (TEXTOS E PAINÉIS)
+// ---------------------------------------------------------------------------
+
+void Renderer::beginHUD()
+{
+    cameraX = 0.0f;
+    cameraY = 0.0f;
+
+    // Mesma janela de 800x600, mas presa na origem: como a câmera não entra
+    // na conta, o que for desenhado daqui em diante acompanha a tela.
+    glm::mat4 projection = glm::ortho(0.0f, WORLD_WIDTH, 0.0f, WORLD_HEIGHT, -1.0f, 1.0f);
+    shader.setMat4("projection", projection);
+}
+
+void Renderer::drawRect(const glm::vec2 &center, const glm::vec2 &size, const glm::vec4 &color)
+{
+    glm::mat4 model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(center, 0.0f));
+    model = glm::scale(model, glm::vec3(size, 1.0f));
+
+    shader.setMat4("model", model);
+    shader.setVec2("texScale", glm::vec2(1.0f));
+    shader.setVec2("texOffset", glm::vec2(0.0f));
+    shader.setVec4("tintColor", color);
+
+    drawQuad(whiteTexture.id);
+}
+
+void Renderer::drawText(const Font &font, const std::string &text, float x, float y, const glm::vec4 &color)
+{
+    shader.setVec4("tintColor", color);
+
+    // A "caneta" começa em x e anda para a direita a cada caractere
+    float penX = x;
+    for (char c : text)
+    {
+        const Glyph *glyph = font.getGlyph(c);
+        if (!glyph)
+            continue;
+
+        if (glyph->width > 0.0f && glyph->height > 0.0f) // o espaço não tem desenho, só avanço
+        {
+            // Arredonda para o pixel inteiro, senão a letra fica borrada
+            float left = std::round(penX + glyph->offsetX);
+            float bottom = std::round(y + glyph->offsetY);
+
+            // Um quad por caractere, do tamanho exato do desenho dele
+            glm::mat4 model = glm::mat4(1.0f);
+            model = glm::translate(model, glm::vec3(left + glyph->width * 0.5f,
+                                                    bottom + glyph->height * 0.5f, 0.0f));
+            model = glm::scale(model, glm::vec3(glyph->width, glyph->height, 1.0f));
+
+            // Recorte do atlas: mesma ideia do quadro de uma spritesheet
+            shader.setMat4("model", model);
+            shader.setVec2("texScale", glm::vec2(glyph->ds, glyph->dt));
+            shader.setVec2("texOffset", glm::vec2(glyph->s, glyph->t));
+
+            drawQuad(font.atlas.id);
+        }
+
+        penX += glyph->advance;
+    }
+}
+
+// ---------------------------------------------------------------------------
 
 void Renderer::shutdown()
 {
+    glDeleteTextures(1, &whiteTexture.id);
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteBuffers(1, &EBO);
