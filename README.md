@@ -192,7 +192,7 @@ por pessoas (ver [Créditos e licenças](#créditos-e-licenças)).
 |---|---|---|
 | Imagens (personagem, espinho, chão e os três fundos) | Claude, da Anthropic | A IA escreveu um script que desenha as imagens |
 | Efeitos sonoros (os quatro `.wav`) | Claude, da Anthropic | A IA escreveu um script que sintetiza os sons |
-| Música (`Arcade_Rush.mp3`) | Ferramenta de IA de geração de música | Gerada pela dupla e adicionada ao projeto |
+| Música (`Arcade_Rush.mp3`) | Suno AI | Gerada pela dupla e adicionada ao projeto |
 
 ### Imagens
 
