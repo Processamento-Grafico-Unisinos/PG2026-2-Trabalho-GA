@@ -1,68 +1,138 @@
-// Game.cpp - PESSOA 2 (lógica do jogo)
-// ATENÇÃO: o conteúdo abaixo é só um ESBOÇO para o projeto rodar e para
-// testar o motor de renderização. A Pessoa 2 substitui pela lógica real
-// (pulo, gravidade, colisão AABB, game over, geração de obstáculos).
+
 #include "Game.h"
 #include "Config.h"
 
 #include <GLFW/glfw3.h>
-
-static const float PLAYER_SPEED    = 300.0f; // unidades de mundo por segundo
-static const float PLAYER_SIZE     = 50.0f;
-static const float PLAYER_SCREEN_X = 200.0f; // distância do jogador até a borda esquerda da tela
+#include <algorithm>
+#include <cstdlib>
 
 void Game::init(unsigned int playerTexture, unsigned int groundTexture, unsigned int obstacleTexture)
 {
-    // Jogador: apoiado no chão (position é o CENTRO do sprite)
     player.textureID = playerTexture;
     player.size = glm::vec2(PLAYER_SIZE, PLAYER_SIZE);
-    player.position = glm::vec2(PLAYER_SCREEN_X, GROUND_HEIGHT + PLAYER_SIZE / 2.0f);
-    player.color = glm::vec4(1.0f, 0.85f, 0.1f, 1.0f);
 
-    // Chão: uma faixa da largura da tela
     ground.textureID = groundTexture;
-    ground.size = glm::vec2(WORLD_WIDTH, GROUND_HEIGHT);
-    ground.position = glm::vec2(WORLD_WIDTH / 2.0f, GROUND_HEIGHT / 2.0f);
-    ground.color = glm::vec4(0.15f, 0.2f, 0.45f, 1.0f);
+    ground.size = glm::vec2(GROUND_WIDTH, GROUND_HEIGHT);
 
-    // Obstáculos de exemplo, espalhados pela fase
-    obstacles.clear();
-    for (int i = 0; i < 20; i++)
-    {
-        Sprite obstacle;
-        obstacle.textureID = obstacleTexture;
-        obstacle.size = glm::vec2(40.0f, 40.0f + 20.0f * (i % 3));
-        obstacle.position = glm::vec2(700.0f + 450.0f * i, GROUND_HEIGHT + obstacle.size.y / 2.0f);
-        obstacle.color = glm::vec4(0.9f, 0.2f, 0.3f, 1.0f);
-        obstacles.push_back(obstacle);
-    }
+    obstacleTextureID = obstacleTexture;
 
+    srand(1234); // semente fixa (fases iguais em todo teste); troque por (unsigned)time(NULL) se quiser variar
+
+    resetGame();
+}
+
+void Game::resetGame()
+{
     cameraX = 0.0f;
+    gameOver = false;
+    score = 0;
+
+    velocityY = 0.0f;
+    onGround = true;
+    player.position = glm::vec2(PLAYER_SCREEN_X, GROUND_HEIGHT + player.size.y * 0.5f);
+
+    obstacles.clear();
+    nextObstacleX = 900.0f; // primeiro obstáculo um pouco além da borda direita inicial
+    for (int i = 0; i < 5; i++)
+        spawnObstacle();
+}
+
+void Game::spawnObstacle()
+{
+    Sprite obstacle;
+    obstacle.textureID = obstacleTextureID;
+    obstacle.size = glm::vec2(OBSTACLE_SIZE_W, OBSTACLE_SIZE_H);
+    obstacle.position = glm::vec2(nextObstacleX, GROUND_HEIGHT + obstacle.size.y * 0.5f);
+    obstacle.color = glm::vec4(0.9f, 0.2f, 0.2f, 1.0f); // vermelho (ALTERADO)
+    obstacles.push_back(obstacle);
+
+    float gap = OBSTACLE_GAP_MIN + static_cast<float>(rand()) / RAND_MAX * (OBSTACLE_GAP_MAX - OBSTACLE_GAP_MIN);
+    nextObstacleX += gap;
 }
 
 void Game::processInput(GLFWwindow *window)
 {
-    // TODO (Pessoa 2): pulo
-    // if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS) { ... }
-    (void)window;
+    bool spacePressedNow = glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS;
+
+    if (gameOver)
+    {
+        // Borda de subida: só reinicia no instante em que a tecla é pressionada
+        if (spacePressedNow && !spacePressedLastFrame)
+            resetGame();
+    }
+    else if (spacePressedNow && !spacePressedLastFrame && onGround)
+    {
+        velocityY = JUMP_VELOCITY;
+        onGround = false;
+    }
+
+    spacePressedLastFrame = spacePressedNow;
 }
 
 void Game::update(float dt)
 {
-    // O jogador avança sozinho, como no Geometry Dash
-    player.position.x += PLAYER_SPEED * dt;
+    if (gameOver)
+        return;
 
-    // Só para demonstrar a rotação da matriz de modelo.
-    // TODO (Pessoa 2): girar apenas durante o pulo.
-    player.rotation -= 180.0f * dt;
+    cameraX += SCROLL_SPEED * dt;
+    score = static_cast<int>(cameraX / 10.0f);
 
-    // TODO (Pessoa 2): gravidade e pulo (position.y)
-    // TODO (Pessoa 2): colisão AABB jogador x obstáculos (getPMin / getPMax)
-    // TODO (Pessoa 2): player.updateAnimation(dt) quando houver spritesheet
+    updatePlayerPhysics(dt);
+    updateObstacles(dt);
 
-    // A câmera acompanha o jogador, mantendo-o sempre no mesmo ponto da tela
-    cameraX = player.position.x - PLAYER_SCREEN_X;
+    player.updateAnimation(dt);
 
-    // O chão acompanha a câmera para parecer infinito
-    ground.position.x = cameraX + WORLD_WIDTH / 2.0f;
+    // O chão é um retângulo só, recentralizado sob a câmera a cada frame
+    // (mais simples que controlar tiling de verdade, e já resolve o "infinito")
+    ground.position = glm::vec2(cameraX + WORLD_WIDTH * 0.5f, GROUND_HEIGHT * 0.5f);
+
+    for (const auto &obstacle : obstacles)
+    {
+        if (checkCollision(player, obstacle))
+        {
+            gameOver = true;
+            break;
+        }
+    }
+}
+
+void Game::updatePlayerPhysics(float dt)
+{
+    // O personagem fica numa posição fixa na tela; quem "anda" é a câmera
+    player.position.x = cameraX + PLAYER_SCREEN_X;
+
+    velocityY += GRAVITY * dt;
+    player.position.y += velocityY * dt;
+
+    float floorY = GROUND_HEIGHT + player.size.y * 0.5f;
+    if (player.position.y <= floorY)
+    {
+        player.position.y = floorY;
+        velocityY = 0.0f;
+        onGround = true;
+    }
+}
+
+void Game::updateObstacles(float dt)
+{
+    // Gera obstáculos novos conforme a câmera se aproxima da borda direita da tela
+    while (nextObstacleX < cameraX + WORLD_WIDTH + 200.0f)
+        spawnObstacle();
+
+    // Remove obstáculos que já ficaram totalmente pra trás da câmera (não aparecem mais)
+    obstacles.erase(
+        std::remove_if(obstacles.begin(), obstacles.end(),
+                        [this](const Sprite &o) { return o.getPMax().x < cameraX; }),
+        obstacles.end());
+}
+
+// Colisão AABB clássica: as duas caixas se sobrepõem se, em AMBOS os eixos,
+// o intervalo [min, max] de uma toca o intervalo da outra.
+bool Game::checkCollision(const Sprite &a, const Sprite &b) const
+{
+    glm::vec2 aMin = a.getPMin(), aMax = a.getPMax();
+    glm::vec2 bMin = b.getPMin(), bMax = b.getPMax();
+
+    return aMin.x <= bMax.x && aMax.x >= bMin.x &&
+           aMin.y <= bMax.y && aMax.y >= bMin.y;
 }

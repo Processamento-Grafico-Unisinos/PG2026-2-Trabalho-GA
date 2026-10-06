@@ -8,7 +8,9 @@
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
 
+#include <cstdio> // ALTERADO: sprintf, para montar o título com pontos/game over
 #include <iostream>
 #include <vector>
 
@@ -144,6 +146,9 @@ int main()
     Game game;
     game.init(white.id, white.id, white.id);
 
+    game.player.color = glm::vec4(0.2f, 0.8f, 1.0f, 1.0f); // ciano
+    game.ground.color  = glm::vec4(0.3f, 0.3f, 0.3f, 1.0f); // cinza escuro
+
     // --- GAME LOOP ---
     double lastTime = glfwGetTime();
     while (!glfwWindowShouldClose(window))
@@ -164,6 +169,15 @@ int main()
 
         // 2. UPDATE
         game.update(dt);
+
+        // ALTERADO: HUD simples (pontos / game over) exibido no título da janela,
+        // já que o trabalho ainda não tem texto na tela (FreeType é extra opcional)
+        char titleBuf[256];
+        if (game.gameOver)
+            sprintf(titleBuf, "Grau A -- Gabriel Gomes e Guilherme Paes | GAME OVER (pontos: %d) - aperte ESPACO para reiniciar", game.score);
+        else
+            sprintf(titleBuf, "Grau A -- Gabriel Gomes e Guilherme Paes | Pontos: %d", game.score);
+        glfwSetWindowTitle(window, titleBuf);
 
         // 3. RENDER - a ordem das chamadas define o que fica na frente
         renderer.beginFrame(game.cameraX);
